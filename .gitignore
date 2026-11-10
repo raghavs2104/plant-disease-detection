@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.idea/
+.venv/
+venv/
+
+dataset/*
+!dataset/.gitkeep
+models/*
+!models/.gitkeep
+outputs/*
+!outputs/.gitkeep
+test_images/*
+!test_images/.gitkeep

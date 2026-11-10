@@ -1,0 +1,30 @@
+from pathlib import Path
+
+PROJECT_DIR = Path(__file__).resolve().parent
+
+DATASET_DIR = PROJECT_DIR / "dataset"
+MODEL_DIR = PROJECT_DIR / "models"
+OUTPUT_DIR = PROJECT_DIR / "outputs"
+
+FINAL_MODEL_PATH = MODEL_DIR / "plant_disease_model.keras"
+TRANSFER_STAGE_MODEL_PATH = MODEL_DIR / "transfer_stage_model.keras"
+CLASS_NAMES_PATH = MODEL_DIR / "class_names.json"
+MODEL_INFO_PATH = MODEL_DIR / "model_info.json"
+SPLIT_MANIFEST_PATH = OUTPUT_DIR / "dataset_split.csv"
+
+IMAGE_HEIGHT = 224
+IMAGE_WIDTH = 224
+IMAGE_CHANNELS = 3
+BATCH_SIZE = 32
+TRANSFER_EPOCHS = 12
+FINE_TUNE_EPOCHS = 8
+FINE_TUNE_LAYERS = 30
+TRAIN_FRACTION = 0.70
+VALIDATION_FRACTION = 0.15
+TEST_FRACTION = 0.15
+RANDOM_SEED = 42
+LOW_CONFIDENCE_THRESHOLD = 0.60
+
+SUPPORTED_IMAGE_EXTENSIONS = {
+    ".jpg", ".jpeg", ".png", ".bmp", ".gif"
+}
